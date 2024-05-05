@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Climate Change Chatbot</title>
+</head>
+<body>
+    <h1>Climate Change Chatbot</h1>
+    <form action="/get_response" method="post">
+        <label for="user_input">Ask a question about climate change:</label><br>
+        <input type="text" id="user_input" name="user_input" required><br>
+        <input type="submit" value="Ask">
+    </form>
+    {% if user_input %}
+        <p><strong>You:</strong> {{ user_input }}</p>
+        <p><strong>Chatbot:</strong> {{ response }}</p>
+    {% endif %}
+</body>
+</html>
